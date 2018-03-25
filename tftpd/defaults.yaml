@@ -1,0 +1,4 @@
+tftp:
+  base_dir: /srv/tftpd
+  package: tftpd-hpa
+  service: tftpd
