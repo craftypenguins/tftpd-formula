@@ -1,4 +1,7 @@
-tftp:
-  base_dir: /srv/tftpd
+tftpd:
+  base_dir: /srv/tftp
   package: tftpd-hpa
-  service: tftpd
+  service: tftpd-hpa
+  config_file: /etc/default/tftpd-hpa
+  config_template: salt://tftpd/templates/debian-config.jinja
+  user: tftp

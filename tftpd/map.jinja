@@ -8,12 +8,10 @@ that differ from whats in defaults.yaml
 {% set os_family_map = salt['grains.filter_by']({
     'Debian': {
       'package': 'tftpd-hpa',
-      'service': 'tftpd',
-    },
-    'RedHat': {
-      'package': 'tftpd',
-      'service': 'tftpd',
-    },
+      'service': 'tftpd-hpa',
+      'config_file': '/etc/default/tftpd-hpa',
+      'config_template': 'salt://tftpd/templates/debian-config.jinja',
+    }
   }
   , grain="os_family"
   , merge=salt['pillar.get']('tftpd:lookup'))

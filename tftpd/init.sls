@@ -5,5 +5,5 @@
 
 include:
   - tftpd.install
-#  - tftpd.config
+  - tftpd.config
   - tftpd.service
